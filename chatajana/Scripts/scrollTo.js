@@ -1,21 +1,21 @@
 ﻿jQuery(function ($) {
     $.scrollTo(0);
 
-    $('#link-map').click(function () {
+    $('.link-map').click(function () {
         $.scrollTo($('#map-section'), 600, { offset: -50 });
-        $('#link-map').blur();
+        $('.link-map').blur();
     });
-    $('#link-contact').click(function () {
+    $('.link-contact').click(function () {
         $.scrollTo($('#contact'), 600, { offset: -50 });
-        $('#link-contact').blur();
+        $('.link-contact').blur();
     });
-    $('#link-gallery').click(function () {
+    $('.link-gallery').click(function () {
         $.scrollTo($('#gallery-section'), 600, { offset: -50 });
-        $('#link-gallery').blur();
+        $('.link-gallery').blur();
     });
-    $('#link-sendmail').click(function () {
+    $('.link-sendmail').click(function () {
         $.scrollTo($('#sendmail'), 600, { offset: -50 });
-        $('#link-sendmail').blur();
+        $('.link-sendmail').blur();
     });
     $('#link-top').click(function () {
         $.scrollTo($('#top'), 600, { offset: -55 });

@@ -66,6 +66,10 @@ body {
     background-color: #fff;
 }
 
+.under-768 {
+    display: none;
+}
+
 /*----- NAVIGATION END -----*/
 
 .container {
@@ -145,7 +149,7 @@ li {
     box-shadow: 0px 0px 15px 0px rgba(221,221,221,1);
 }
 
-/*----- NAVIGATION END -----*/
+/*----- MAP END -----*/
 
 .container-info {
     padding: 0px 10px;
@@ -162,20 +166,43 @@ footer {
 
 @media only screen and (max-width: 767px) {
     
+    .container-fluid {
+        padding-right: 0px;
+    }
+
     .nav>li:first-child {
         border-left: none;
     }
+
     .nav>li {
-        font-size: 140%;
+        font-size: 180%;
         border-right: none;
     }
 
     .nav>li>a {
         line-height: normal;
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        margin: 0px;
     }
 
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: #1188dd;
+    }
+
+    .dropdown-menu>li>a {
+        font-size: 130%;
+        line-height: 1.8;
+    }
+
+    .over-768 {
+        display: none;
+    }
+
+    .under-768 {
+        display: inline;
     }
 
     /*----- NAVIGATION END -----*/
@@ -208,7 +235,7 @@ footer {
     /*----- MAIN CONTENT END -----*/
 
     .row > .content-md {
-        padding: 0px 8px;
+        padding: 0px 8px 8px 8px;
     }
 
     .container-map {

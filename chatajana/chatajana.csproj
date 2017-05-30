@@ -66,6 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apartamenty.html" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="dist\css\lightbox.css" />
     <Content Include="dist\css\lightbox.min.css" />
     <Content Include="dist\images\close.png" />
@@ -76,6 +84,15 @@
     <Content Include="dist\js\lightbox-plus-jquery.min.js" />
     <Content Include="dist\js\lightbox.js" />
     <Content Include="dist\js\lightbox.min.js" />
+    <Content Include="fontello\css\animation.css" />
+    <Content Include="fontello\css\fontello-codes.css" />
+    <Content Include="fontello\css\fontello-embedded.css" />
+    <Content Include="fontello\css\fontello-ie7-codes.css" />
+    <Content Include="fontello\css\fontello-ie7.css" />
+    <Content Include="fontello\css\fontello.css" />
+    <Content Include="fontello\font\fontello.svg" />
+    <Content Include="fontello\LICENSE.txt" />
+    <Content Include="fontello\README.txt" />
     <Content Include="images\index\2.jpg" />
     <Content Include="images\index\3.jpg" />
     <Content Include="images\index\4.jpg" />
@@ -94,10 +111,6 @@
     <Content Include="images\index\500_7.jpg" />
     <Content Include="images\index\500_8.jpg" />
     <Content Include="images\index\500_9.jpg" />
-    <Content Include="images\index\707_1.jpg" />
-    <Content Include="images\index\707_2.jpg" />
-    <Content Include="images\index\707_3.jpg" />
-    <Content Include="images\index\707_4.jpg" />
     <Content Include="images\index\b1.jpg" />
     <Content Include="images\index\b10.jpg" />
     <Content Include="images\index\b11.jpg" />
@@ -124,11 +137,22 @@
     <Content Include="images\index\s7.jpg" />
     <Content Include="images\index\s8.jpg" />
     <Content Include="images\index\s9.jpg" />
+    <Content Include="mieszkanie.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="dist\images\Thumbs.db" />
     <Content Include="dist\js\lightbox-plus-jquery.min.map" />
     <Content Include="dist\js\lightbox.min.map" />
+    <Content Include="fontello\config.json" />
+    <Content Include="fontello\font\fontello.eot" />
+    <Content Include="fontello\font\fontello.ttf" />
+    <Content Include="fontello\font\fontello.woff" />
+    <Content Include="fontello\font\fontello.woff2" />
+    <Content Include="bootstrap\config.json" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,23 +162,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
