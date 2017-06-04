@@ -103,6 +103,7 @@
     <Content Include="images\index\500_13.jpg" />
     <Content Include="images\index\500_14.jpg" />
     <Content Include="images\index\500_15.jpg" />
+    <Content Include="images\index\500_17.jpg" />
     <Content Include="images\index\500_2.jpg" />
     <Content Include="images\index\500_3.jpg" />
     <Content Include="images\index\500_4.jpg" />
@@ -118,6 +119,7 @@
     <Content Include="images\index\b13.jpg" />
     <Content Include="images\index\b14.jpg" />
     <Content Include="images\index\b15.jpg" />
+    <Content Include="images\index\b17.jpg" />
     <Content Include="images\index\b2.jpg" />
     <Content Include="images\index\b3.jpg" />
     <Content Include="images\index\b4.jpg" />
@@ -132,6 +134,7 @@
     <Content Include="images\index\s13.jpg" />
     <Content Include="images\index\s14.jpg" />
     <Content Include="images\index\s15.jpg" />
+    <Content Include="images\index\s17.jpg" />
     <Content Include="images\index\s5.jpg" />
     <Content Include="images\index\s6.jpg" />
     <Content Include="images\index\s7.jpg" />
