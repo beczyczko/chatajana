@@ -18,3 +18,5 @@ C:\xampp\htdocs\chatajana\chatajana\bin\Microsoft.CodeDom.Providers.DotNetCompil
 C:\xampp\htdocs\chatajana\chatajana\obj\Debug\chatajana.csprojResolveAssemblyReference.cache
 C:\xampp\htdocs\chatajana\chatajana\obj\Debug\chatajana.dll
 C:\xampp\htdocs\chatajana\chatajana\obj\Debug\chatajana.pdb
+C:\xampp\htdocs\chatajana\chatajana\obj\Debug\chatajana.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\chatajana\chatajana\obj\Debug\chatajana.csproj.CopyComplete
