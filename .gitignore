@@ -1,4 +1,4 @@
 *.orig
 *.cache
 .vs/*
-obj/*
+*/obj/*
