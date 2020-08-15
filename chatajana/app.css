@@ -273,3 +273,15 @@ footer {
         display: none;
     }
 }
+
+.bon {
+    width: 100%;
+}
+
+.bon.content-sm {
+    padding: 0;
+}
+
+.bon.content-md {
+    padding: 0;
+}
