@@ -286,7 +286,10 @@ const Home = ({ content, error }) => {
             </main>
 
             <footer>
+                &copy; 2021 chatajana.pl
             </footer>
+
+            <script src="lightbox/dist/js/lightbox-plus-jquery.js"></script>
         </div>
     )
 };
