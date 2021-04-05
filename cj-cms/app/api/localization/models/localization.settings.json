@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localization",
+  "info": {
+    "name": "localization"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
