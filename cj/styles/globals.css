@@ -1,16 +1,287 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 190%;
+  padding: 0px 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000066;
+}
+
+h2 {
+  font-size: 160%;
+  padding: 0px 15px;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+  padding-top: 55px; 
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: #3399ff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+  font-size: 170%;
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #333;
+}
+
+.nav>li {
+  font-size: 120%;
+  border-right: 2px solid #1188dd;
+}
+
+.nav>li:first-child {
+  border-left: 2px solid #1188dd;
+}
+
+.navbar-nav > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.navbar-nav {
+  margin: 8px;
+}
+
+.container-fluid {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.under-768 {
+  display: none;
+}
+
+/*----- NAVIGATION END -----*/
+
+.container {
+  width: auto;
+  padding: 15px;
+  margin-top: 18px;
+  text-align: justify;
+  background-color: #FAFAFA;
+  box-shadow: 0px 0px 15px 0px rgba(221,221,221,1);
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.row {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col-sm-7, .col-sm-5 {
+  padding: 10px;
+}
+
+.txt {
+  font-size: 130%;
+  color: #222;
+}
+
+.description {
+  text-indent: 8%;
+}
+
+.txt > a {
+  text-decoration: none;
+  color: #222;
+}
+
+li {
+  padding: 0px;
+}
+
+/*----- MAIN CONTENT END -----*/
+
+.img-responsive {
+  box-shadow: 0px 0px 15px 0px rgba(221,221,221,1);
+}
+
+.content-md a img {
+  position: relative;
+  float: left;
+  height: 120px;
+  margin: 4px;
+box-shadow: 0px 0px 15px 0px rgba(221,221,221,1);
+}
+
+.content-md {
+  display: inline;
+}
+
+.content-sm {
+  display: none;
+}
+
+/*----- GALLERY END -----*/
+
+#map {
+  width: 100%;
+  height: 350px;
+  background-color: grey;
+  border: none;
+  box-shadow: 0px 0px 15px 0px rgba(221,221,221,1);
+}
+
+/*----- MAP END -----*/
+
+.container-info {
+  padding: 0px 10px;
+}
+
+#contact {
+  padding-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  
+  .container-fluid {
+      padding-right: 0px;
+  }
+
+  .nav>li:first-child {
+      border-left: none;
+  }
+
+  .nav>li {
+      font-size: 180%;
+      border-right: none;
+  }
+
+  .nav>li>a {
+      line-height: normal;
+      padding: 10px;
+  }
+
+  .navbar-nav {
+      margin: 0px;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #1188dd;
+  }
+
+  .dropdown-menu>li>a {
+      font-size: 130%;
+      line-height: 1.8;
+  }
+
+  .over-768 {
+      display: none;
+  }
+
+  .under-768 {
+      display: inline;
+  }
+
+  /*----- NAVIGATION END -----*/
+
+  body {
+      padding-top: 50px; 
+  }
+
+  h2 {
+      text-align: center;
+  }
+  
+  .content {
+      padding: 0px 10px;
+  }
+  
+  .container {
+      padding: 0px;
+      margin-top: 10px;
+  }
+  
+  .txt {
+      font-size: 110%;
+  }
+
+  h1 {
+      padding-top: 10px;
+  }
+
+  /*----- MAIN CONTENT END -----*/
+
+  .row > .content-md {
+      padding: 0px 8px 8px 8px;
+  }
+
+  .container-map {
+      margin: 5px 10px;
+  }
+
+  /*----- MAP END -----*/
+
+  .container-partners {
+      padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  
+  .content-md {
+      display: none;
+  }
+
+  .content-sm {
+      display: inline;
+  }
+  
+  .row > .content-sm {
+      padding: 0px 10px;
+  }
+
+  .content-sm > .img-responsive {
+      margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .contact-content {
+      display: none;
+  }
+}
+
+.bon {
+  width: 100%;
+}
+
+.bon.content-sm {
+  padding: 0;
+}
+
+.bon.content-md {
+  padding: 0;
 }
