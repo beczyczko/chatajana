@@ -19,7 +19,7 @@ const Home = ({ content, error }) => {
     const galleryImages = () => {
         return images.slice(galleryStartImageNo, images.length);
     };
-``
+    ``
     return (
         <div>
             <Head>
@@ -184,6 +184,105 @@ const Home = ({ content, error }) => {
                         </div>
                     </div>
                 </div>
+
+                <div id="map-section" className="container-fluid content">
+                    <div className="container">
+                        <h1>Lokalizacja</h1>
+                        <div className="container-map">
+                            <iframe id="map"
+                                    src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=chata+jana&amp;aq=&amp;sll=54.760117,17.556312&amp;sspn=0.119056,0.338173&amp;g=%C5%82eba+pl&amp;ie=UTF8&amp;t=m&amp;ll=54.750164,17.565207&amp;spn=0.006935,0.01605&amp;z=15&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact" className="container-fluid content">
+                    <div className="container" id="contact">
+                        <h1>Kontakt</h1>
+                        <div className="content-sm">
+                            <a href="tel:694572228"><h2>694 572 228</h2></a>
+                            <a href="tel:598661174"><h2>59 866 11 74</h2></a>
+                            <a href="mailto:chatajanaleba@gmail.com?Subject=Zapytanie%20z%20chatajana.pl">
+                                <h2>chatajanaleba@gmail.com</h2></a>
+                        </div>
+                        <div className="content-md">
+                            <h2>694 572 228</h2>
+                            <h2>59 866 11 74</h2>
+                            <h2>chatajanaleba@gmail.com</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container-fluid content">
+                    <div className="container">
+                        <h1>Informacje dodatkowe</h1>
+                        <div className="container-info">
+                            <h3>Pobyt, zakwaterowanie:</h3>
+                            <p>
+                                &ndash; Doba hotelowa zaczyna się o godzinie 13:00 a kończy o 10:00 w dniu wyjazdu.<br/>
+                                &ndash; Rezerwacja powinna być potwierdzona zadatkiem na konto (nr poniżej).<br/>
+                                &ndash; Opłata za pobyt deklarowany zadatkiem pobierana jest w dniu przyjazdu, przy
+                                zameldowaniu.<br/>
+                                &ndash; W przypadku wcześniejszego wyjazdu nie zwracamy niewykorzystanej opłaty.<br/>
+                                &ndash; W przypadku rezygnacji z pobytu zadatek nie podlega zwrotowi.<br/>
+                            </p>
+
+                            <h3>Dane do przelewu:</h3>
+                            <p>
+                                Elżbieta Beczyczko<br/>
+                                ul. Paderewskiego 12, 84-360 Łeba<br/>
+                                Nr konta bankowego: PKO SA 07 1240 3800 1111 0000 4464 1117<br/>
+                                W tytule: termin pobytu (np. od ... do ...) oraz numer kontaktowy<br/>
+                            </p>
+
+                            <h3>Zakres cen:</h3>
+                            <p>Ceny 30-60 zł od osoby za dobę w zależności od terminu i długości pobytu. Ceny noclegów
+                                nie obejmują opłaty klimatycznej.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container-fluid content">
+                    <div className="container">
+                        <div className="row">
+                            <img src="images/bon_m.jpg" className="bon content-sm"/>
+                            <img src="images/bon.jpg" className="bon content-md"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container-fluid content">
+                    <div className="container container-partners">
+                        <a href='http://www.nocowanie.pl/noclegi/leba/kwatery_i_pokoje/2084/' target='_blank'
+                           title='Chata Jana'>
+                            <img src='http://img.nocowanie.pl/files/photos/exban/1_1.gif' border='0'
+                                 alt='Chata Jana' width='108' height='70'/>
+                        </a>
+                        <a href='http://www.nocowanie.pl/noclegi/leba/' target='_blank' title='Łeba'><img
+                            src='http://img.nocowanie.pl/files/photos/exban/1_2.gif' border='0' alt='Łeba' width='21'
+                            height='70'/></a>
+                        <a href='http://www.nocowanie.pl/' target='_blank' title='noclegi'>
+                            <img src='http://img.nocowanie.pl/files/photos/exban/1_3.gif' border='0' alt='noclegi'
+                                 width='31' height='70'/>
+                            <a href="http://www.eholiday.pl/noclegi-nn3873.html" title="Pokoje Gościnne Chata Jana Łeba"
+                               target="_blank">
+                                <img src="http://www.eholiday.pl/img/partner/l1a.gif"
+                                     alt="Pokoje Gościnne Chata Jana Łeba" border="0" width="52"
+                                     height="26"/>
+                            </a>
+                            <a href="http://www.eholiday.pl/noclegi-leba-53017.html" title="noclegi Łeba"
+                               target="_blank">
+                                <img src="http://www.eholiday.pl/img/partner/l1b.gif" alt="noclegi Łeba" border="0"
+                                     width="22"
+                                     height="26"/>
+                            </a>
+                            <a href="http://www.eholiday.pl" title="noclegi" target="_blank">
+                                <img src="http://www.eholiday.pl/img/partner/l1c.gif" alt="noclegi" border="0"
+                                     width="22" height="26"/>
+                            </a>
+                        </a>
+                    </div>
+                </div>
+
             </main>
 
             <footer>
