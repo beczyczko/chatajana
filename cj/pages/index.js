@@ -22,6 +22,7 @@ const Home = ({ content, error }) => {
         return images.slice(galleryStartImageNo, images.length);
     };
 
+    //todo db split into components
     return (
         <div>
             <Head>
@@ -161,6 +162,7 @@ const Home = ({ content, error }) => {
                 </div>
 
                 <div id="gallery-section" className="container-fluid content">
+                    {/*todo db fix image width to fit 5 standard thumbnails in a row*/}
                     <div className="container">
                         <div className="row">
                             <h1>Galeria</h1>
