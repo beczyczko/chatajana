@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+const cmsBaseUrl = 'https://cjcms.mbtl.life';
+
 const Home = ({ content, error }) => {
     const galleryStartImageNo = 4;
 
@@ -13,13 +15,13 @@ const Home = ({ content, error }) => {
     const imageSource = (imageNo, size) => {
         const imageInDesiredFormat = images[imageNo].img.formats[size];
         const imageRelativeUrl = imageInDesiredFormat ? imageInDesiredFormat.url : images[imageNo].img.url;
-        return `http://localhost:1337${imageRelativeUrl}`;
+        return `${cmsBaseUrl}${imageRelativeUrl}`;
     };
 
     const galleryImages = () => {
         return images.slice(galleryStartImageNo, images.length);
     };
-    ``
+
     return (
         <div>
             <Head>
@@ -313,7 +315,7 @@ Home.getInitialProps = async ctx => {
             'Content-Type': 'application/json',
         };
 
-        const content = await fetch('http://localhost:1337/localizations/1', {
+        const content = await fetch(`${cmsBaseUrl}/localizations/1`, {
             method: 'GET',
             headers,
         })
