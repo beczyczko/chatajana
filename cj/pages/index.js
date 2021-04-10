@@ -288,7 +288,7 @@ const Home = ({ content, error }) => {
             </main>
 
             <footer>
-                &copy; 2021 chatajana.pl
+                &copy; {new Date().getFullYear()} chatajana.pl
             </footer>
 
             <script src="lightbox/dist/js/lightbox-plus-jquery.js"></script>
