@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
-const cmsBaseUrl = 'https://cjcms.mbtl.life';
+import Gallery from '../components/Gallery';
+import { imageSource } from '../common/imageHelper';
+import { cmsBaseUrl } from '../config';
 
 const Home = ({ content, error }) => {
     const galleryStartImageNo = 4;
@@ -10,16 +11,14 @@ const Home = ({ content, error }) => {
         return <div>An error occurred: {error.message}</div>;
     }
 
-    const images = content.images.map((img, i) => ({ i, img }));
+    const indexedImages = content.images.map((img, index) => ({ index, img }));
 
-    const imageSource = (imageNo, size) => {
-        const imageInDesiredFormat = images[imageNo].img.formats[size];
-        const imageRelativeUrl = imageInDesiredFormat ? imageInDesiredFormat.url : images[imageNo].img.url;
-        return `${cmsBaseUrl}${imageRelativeUrl}`;
+    const imageByIndex = (index) => {
+        return indexedImages[index].img;
     };
 
     const galleryImages = () => {
-        return images.slice(galleryStartImageNo, images.length);
+        return indexedImages.slice(galleryStartImageNo, indexedImages.length);
     };
 
     //todo db split into components
@@ -81,11 +80,14 @@ const Home = ({ content, error }) => {
                     <div className="container">
                         <div className="row">
                             <aside className="col-sm-7">
-                                <a className="content-md example-image-link" href={imageSource(0, 'large')}
+                                <a className="content-md example-image-link"
+                                   href={imageSource(imageByIndex(0), 'large')}
                                    data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(0, 'medium')} alt=""/>
+                                    <img className="img-responsive" src={imageSource(imageByIndex(0), 'medium')}
+                                         alt=""/>
                                 </a>
-                                <img src={imageSource(0, 'small')} className="content-sm img-responsive"/>
+                                <img src={imageSource(imageByIndex(0), 'small')}
+                                     className="content-sm img-responsive"/>
                             </aside>
                             <section className="col-sm-5">
                                 <div className="txt description">Chata Jana zaprasza do Łeby. Polecamy ciepły klimat
@@ -99,11 +101,14 @@ const Home = ({ content, error }) => {
                         </div>
                         <div className="row">
                             <aside className="col-sm-7 col-sm-push-5">
-                                <a className="content-md example-image-link" href={imageSource(1, 'large')}
+                                <a className="content-md example-image-link"
+                                   href={imageSource(imageByIndex(1), 'large')}
                                    data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(1, 'medium')} alt=""/>
+                                    <img className="img-responsive" src={imageSource(imageByIndex(1), 'medium')}
+                                         alt=""/>
                                 </a>
-                                <img src={imageSource(1, 'small')} className="content-sm img-responsive"/>
+                                <img src={imageSource(imageByIndex(1), 'small')}
+                                     className="content-sm img-responsive"/>
                             </aside>
                             <section className="col-sm-5 col-sm-pull-7">
                                 <div className="txt">
@@ -120,11 +125,14 @@ const Home = ({ content, error }) => {
                         </div>
                         <div className="row">
                             <aside className="col-sm-7">
-                                <a className="content-md example-image-link" href={imageSource(2, 'large')}
+                                <a className="content-md example-image-link"
+                                   href={imageSource(imageByIndex(2), 'large')}
                                    data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(2, 'medium')} alt=""/>
+                                    <img className="img-responsive" src={imageSource(imageByIndex(2), 'medium')}
+                                         alt=""/>
                                 </a>
-                                <img src={imageSource(2, 'small')} className="content-sm img-responsive"/>
+                                <img src={imageSource(imageByIndex(2), 'small')}
+                                     className="content-sm img-responsive"/>
                             </aside>
                             <section className="col-sm-5">
                                 <div className="txt">
@@ -140,11 +148,14 @@ const Home = ({ content, error }) => {
                         </div>
                         <div className="row">
                             <aside className="col-sm-7 col-sm-push-5">
-                                <a className="content-md example-image-link" href={imageSource(3, 'large')}
+                                <a className="content-md example-image-link"
+                                   href={imageSource(imageByIndex(3), 'large')}
                                    data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(3, 'medium')} alt=""/>
+                                    <img className="img-responsive" src={imageSource(imageByIndex(3), 'medium')}
+                                         alt=""/>
                                 </a>
-                                <img src={imageSource(3, 'small')} className="content-sm img-responsive"/>
+                                <img src={imageSource(imageByIndex(3), 'small')}
+                                     className="content-sm img-responsive"/>
                             </aside>
                             <section className="col-sm-5 col-sm-pull-7">
                                 <div className="txt">
@@ -161,33 +172,7 @@ const Home = ({ content, error }) => {
                     </div>
                 </div>
 
-                <div id="gallery-section" className="container-fluid content">
-                    {/*todo db fix image width to fit 5 standard thumbnails in a row*/}
-                    <div className="container">
-                        <div className="row">
-                            <h1>Galeria</h1>
-                        </div>
-                        <div className="row">
-                            <div className="content-md">
-                                {galleryImages().map(({ i, img }) => (
-                                    <a key={`gallery-img-${i}`}
-                                       className="example-image-link"
-                                       href={imageSource(i, 'large')}
-                                       data-lightbox="gallery">
-                                        <img className="image-thumb" src={imageSource(i, 'thumbnail')} alt=""/>
-                                    </a>
-                                ))}
-                            </div>
-                            <div className="content-sm">
-                                {galleryImages().map(({ i, img }) => (
-                                    <img key={`gallery-img-${i}`}
-                                         src={imageSource(i, 'small')}
-                                         className="img-responsive"/>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Gallery galleryImages={galleryImages()}/>
 
                 <div id="map-section" className="container-fluid content">
                     <div className="container">
