@@ -5,19 +5,19 @@ const Gallery = (props) => {
 
     return (
         <div id="gallery-section" className="container-fluid content">
-            {/*todo db fix image width to fit 5 standard thumbnails in a row*/}
             <div className="container">
                 <div className="row">
                     <h1>Galeria</h1>
                 </div>
                 <div className="row">
-                    <div className="content-md">
+                    <div className="gallery-thumbnails">
                         {galleryImages.map(({ index, img }) => (
                             <a key={`gallery-img-${index}`}
-                               className="example-image-link"
                                href={imageSource(img, 'large')}
                                data-lightbox="gallery">
-                                <img className="image-thumb" src={imageSource(img, 'thumbnail')} alt=""/>
+                                <div className="image-frame">
+                                    <img src={imageSource(img, 'thumbnail')} alt=""/>
+                                </div>
                             </a>
                         ))}
                     </div>

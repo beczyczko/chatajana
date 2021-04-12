@@ -123,12 +123,22 @@ li {
     box-shadow: 0px 0px 15px 0px rgba(221, 221, 221, 1);
 }
 
-.content-md a img {
-    position: relative;
-    float: left;
+.gallery-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-thumbnails a .image-frame {
     height: 120px;
+    width: 160px;
     margin: 4px;
+    object-fit: cover;
     box-shadow: 0px 0px 15px 0px rgba(221, 221, 221, 1);
+}
+
+.gallery-thumbnails a .image-frame img {
+    height: inherit;
+    width: inherit;
 }
 
 .content-md {
@@ -248,7 +258,7 @@ footer {
 
 @media only screen and (max-width: 540px) {
 
-    .content-md {
+    .content-md, .gallery-thumbnails {
         display: none;
     }
 
