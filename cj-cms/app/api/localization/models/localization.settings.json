@@ -22,6 +22,12 @@
     },
     "additionalInfo": {
       "model": "additional-info"
+    },
+    "Descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text.description",
+      "required": false
     }
   }
 }
