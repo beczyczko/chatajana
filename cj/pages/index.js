@@ -3,6 +3,8 @@ import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import { imageSource } from '../common/imageHelper';
 import { cmsBaseUrl } from '../config';
+import ReactMarkdown from 'react-markdown';
+import AdditionalInfo from '../components/AdditionalInfo';
 
 const Home = ({ content, error }) => {
     const galleryStartImageNo = 4;
@@ -186,34 +188,7 @@ const Home = ({ content, error }) => {
 
                 <Contact/>
 
-                <div className="container-fluid content">
-                    <div className="container">
-                        <h1>Informacje dodatkowe</h1>
-                        <div className="container-info">
-                            <h3>Pobyt, zakwaterowanie:</h3>
-                            <p>
-                                &ndash; Doba hotelowa zaczyna się o godzinie 13:00 a kończy o 10:00 w dniu wyjazdu.<br/>
-                                &ndash; Rezerwacja powinna być potwierdzona zadatkiem na konto (nr poniżej).<br/>
-                                &ndash; Opłata za pobyt deklarowany zadatkiem pobierana jest w dniu przyjazdu, przy
-                                zameldowaniu.<br/>
-                                &ndash; W przypadku wcześniejszego wyjazdu nie zwracamy niewykorzystanej opłaty.<br/>
-                                &ndash; W przypadku rezygnacji z pobytu zadatek nie podlega zwrotowi.<br/>
-                            </p>
-
-                            <h3>Dane do przelewu:</h3>
-                            <p>
-                                Elżbieta Beczyczko<br/>
-                                ul. Paderewskiego 12, 84-360 Łeba<br/>
-                                Nr konta bankowego: PKO SA 07 1240 3800 1111 0000 4464 1117<br/>
-                                W tytule: termin pobytu (np. od ... do ...) oraz numer kontaktowy<br/>
-                            </p>
-
-                            <h3>Zakres cen:</h3>
-                            <p>Ceny 30-60 zł od osoby za dobę w zależności od terminu i długości pobytu. Ceny noclegów
-                                nie obejmują opłaty klimatycznej.</p>
-                        </div>
-                    </div>
-                </div>
+                <AdditionalInfo additionalInfo={content.additionalInfo}/>
 
                 <div className="container-fluid content">
                     <div className="container">

@@ -165,6 +165,14 @@ li {
     padding: 0px 10px;
 }
 
+.container-info ul {
+    padding-inline-start: 12px;
+}
+
+.container-info ul li::marker {
+    content: "– ";
+}
+
 #contact {
     padding-bottom: 10px;
 }

@@ -1,8 +1,6 @@
 import { imageSource } from '../common/imageHelper';
 
-const Gallery = (props) => {
-    const galleryImages = props.galleryImages;
-
+const Gallery = ({ galleryImages }) => {
     return (
         <div id="gallery-section" className="container-fluid content">
             <div className="container">
