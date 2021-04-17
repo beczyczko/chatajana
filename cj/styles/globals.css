@@ -104,8 +104,13 @@ body {
     color: #222;
 }
 
-.description {
+.description p {
     text-indent: 8%;
+}
+
+.description a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .txt > a {

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { imageSource } from '../common/imageHelper';
 import { cmsBaseUrl } from '../config';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
@@ -7,20 +6,17 @@ import AdditionalInfo from '../components/AdditionalInfo';
 import Bon from '../components/Bon';
 import Partners from '../components/Partners';
 import CjFooter from '../components/CjFooter';
+import Descriptions from '../components/Descriptions';
 
 const Home = ({ content, error }) => {
-    const galleryStartImageNo = 4;
+    const localisationDescriptions = content.descriptions;
+    const galleryStartImageNo = localisationDescriptions.length;
 
     if (error) {
         return <div>An error occurred: {error.message}</div>;
     }
 
     const indexedImages = content.images.map((img, index) => ({ index, img }));
-
-    const imageByIndex = (index) => {
-        return indexedImages[index].img;
-    };
-
     const galleryImages = () => {
         return indexedImages.slice(galleryStartImageNo, indexedImages.length);
     };
@@ -78,101 +74,7 @@ const Home = ({ content, error }) => {
                     </nav>
                 </header>
 
-                <div className="container-fluid content">
-                    <div className="container">
-                        <div className="row">
-                            <aside className="col-sm-7">
-                                <a className="content-md example-image-link"
-                                   href={imageSource(imageByIndex(0), 'large')}
-                                   data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(imageByIndex(0), 'medium')}
-                                         alt=""/>
-                                </a>
-                                <img src={imageSource(imageByIndex(0), 'small')}
-                                     className="content-sm img-responsive"/>
-                            </aside>
-                            <section className="col-sm-5">
-                                <div className="txt description">Chata Jana zaprasza do Łeby. Polecamy ciepły klimat
-                                    naszego pensjonatu. Wybierając naszą ofertę spośród innych <a
-                                        href="http://meteor-turystyka.pl/noclegi,morze,57.html" target='blank'>opcji
-                                        noclegów nad morzem</a>, z pewnością nie pożałujesz! Dysponujemy pokojami 2-5
-                                    osobowymi z łazienkami, balkonami i lodówkami. Do dyspozycji gości jest też w pełni
-                                    wyposażony aneks kuchenny. Teren posesji jest ogrodzony, parking bezpłatny.
-                                </div>
-                            </section>
-                        </div>
-                        <div className="row">
-                            <aside className="col-sm-7 col-sm-push-5">
-                                <a className="content-md example-image-link"
-                                   href={imageSource(imageByIndex(1), 'large')}
-                                   data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(imageByIndex(1), 'medium')}
-                                         alt=""/>
-                                </a>
-                                <img src={imageSource(imageByIndex(1), 'small')}
-                                     className="content-sm img-responsive"/>
-                            </aside>
-                            <section className="col-sm-5 col-sm-pull-7">
-                                <div className="txt">
-                                    <h3>Udostępniamy także:</h3>
-                                    <ul>
-                                        <li>miejsce na samochód</li>
-                                        <li>grill ogrodowy</li>
-                                        <li>plac zabaw dla dzieci</li>
-                                        <li>rowery (płatne)</li>
-                                        <li>parawany</li>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
-                        <div className="row">
-                            <aside className="col-sm-7">
-                                <a className="content-md example-image-link"
-                                   href={imageSource(imageByIndex(2), 'large')}
-                                   data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(imageByIndex(2), 'medium')}
-                                         alt=""/>
-                                </a>
-                                <img src={imageSource(imageByIndex(2), 'small')}
-                                     className="content-sm img-responsive"/>
-                            </aside>
-                            <section className="col-sm-5">
-                                <div className="txt">
-                                    <ul>
-                                        <li>Odległość do plaży - 1,5 km</li>
-                                        <li>Park dinozaurów - 300 m</li>
-                                        <li>Stadniny koni, kajaki - 1,2 km</li>
-                                        <li>Sea Park w Sarbsku - 8 km</li>
-                                        <li>Sklepy, restauracje - 300 m</li>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
-                        <div className="row">
-                            <aside className="col-sm-7 col-sm-push-5">
-                                <a className="content-md example-image-link"
-                                   href={imageSource(imageByIndex(3), 'large')}
-                                   data-lightbox="gallery">
-                                    <img className="img-responsive" src={imageSource(imageByIndex(3), 'medium')}
-                                         alt=""/>
-                                </a>
-                                <img src={imageSource(imageByIndex(3), 'small')}
-                                     className="content-sm img-responsive"/>
-                            </aside>
-                            <section className="col-sm-5 col-sm-pull-7">
-                                <div className="txt">
-                                    <ul>
-                                        <li>Atrakcyjne ceny</li>
-                                        <li>Spokojna okolica</li>
-                                        <li>Komfortowe warunki</li>
-                                        <li>Cena do uzgodnienia</li>
-                                        <li>Zapraszamy do nas!</li>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
+                <Descriptions descriptions={localisationDescriptions} indexedImages={indexedImages}/>
 
                 <Gallery galleryImages={galleryImages()}/>
 
