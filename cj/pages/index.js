@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 import AdditionalInfo from '../components/AdditionalInfo';
 import Bon from '../components/Bon';
 import Partners from '../components/Partners';
+import CjFooter from '../components/CjFooter';
 
 const Home = ({ content, error }) => {
     const galleryStartImageNo = 4;
@@ -197,9 +198,7 @@ const Home = ({ content, error }) => {
 
             </main>
 
-            <footer>
-                &copy; {new Date().getFullYear()} chatajana.pl
-            </footer>
+            <CjFooter/>
 
             <script src="lightbox/dist/js/lightbox-plus-jquery.js"></script>
         </div>
