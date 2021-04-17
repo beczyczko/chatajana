@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Gallery from '../components/Gallery';
-import Contact from '../components/Contact';
 import { imageSource } from '../common/imageHelper';
 import { cmsBaseUrl } from '../config';
-import ReactMarkdown from 'react-markdown';
+import Gallery from '../components/Gallery';
+import Contact from '../components/Contact';
 import AdditionalInfo from '../components/AdditionalInfo';
+import Bon from '../components/Bon';
 
 const Home = ({ content, error }) => {
     const galleryStartImageNo = 4;
@@ -190,14 +190,7 @@ const Home = ({ content, error }) => {
 
                 <AdditionalInfo additionalInfo={content.additionalInfo}/>
 
-                <div className="container-fluid content">
-                    <div className="container">
-                        <div className="row">
-                            <img src="images/bon_m.jpg" className="bon content-sm"/>
-                            <img src="images/bon.jpg" className="bon content-md"/>
-                        </div>
-                    </div>
-                </div>
+                <Bon/>
 
                 <div className="container-fluid content">
                     <div className="container container-partners">
