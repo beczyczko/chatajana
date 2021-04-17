@@ -21,7 +21,11 @@ const Home = ({ content, error }) => {
         return indexedImages.slice(galleryStartImageNo, indexedImages.length);
     };
 
-    //todo db split into components
+    //todo db universal navigation component
+    //todo db layout component
+    //todo db apartamenty page
+    //todo db favicon
+    //todo db google analytics
     return (
         <div>
             <Head>
