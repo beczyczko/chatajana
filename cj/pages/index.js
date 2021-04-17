@@ -56,7 +56,6 @@ const Home = ({ content, error }) => {
                             <div>
                                 <ul className="nav navbar-nav navbar-right over-768">
                                     <li><a href="apartamenty.html">Apartamenty</a></li>
-                                    <li><a href="mieszkanie.html">Mieszkanie</a></li>
                                     <li><a className="link-gallery" href="#">Galeria</a></li>
                                     <li><a className="link-map" href="#">Lokalizacja</a></li>
                                     <li><a className="link-contact" href="#">Kontakt</a></li>
@@ -68,7 +67,6 @@ const Home = ({ content, error }) => {
                                         </a>
                                         <ul className="dropdown-menu">
                                             <li><a href="apartamenty.html">Apartamenty</a></li>
-                                            <li><a href="mieszkanie.html">Mieszkanie</a></li>
                                             <li><a className="link-gallery" href="#">Galeria</a></li>
                                             <li><a className="link-map" href="#">Lokalizacja</a></li>
                                             <li><a className="link-contact" href="#">Kontakt</a></li>
