@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Navigation = () => {
     return (
         <header id="top">
@@ -8,7 +10,8 @@ const Navigation = () => {
                     </div>
                     <div>
                         <ul className="nav navbar-nav navbar-right over-768">
-                            <li><a href="apartamenty.html">Apartamenty</a></li>
+                            <li><Link href="/"><a>Pensjonat</a></Link></li>
+                            <li><Link href="/apartamenty"><a>Apartamenty</a></Link></li>
                             <li><a className="link-gallery" href="#">Galeria</a></li>
                             <li><a className="link-map" href="#">Lokalizacja</a></li>
                             <li><a className="link-contact" href="#">Kontakt</a></li>
@@ -19,7 +22,8 @@ const Navigation = () => {
                                     <div className="fontello"><i className="icon-menu"></i></div>
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="apartamenty.html">Apartamenty</a></li>
+                                    <li><Link href="/"><a>Pensjonat</a></Link></li>
+                                    <li><Link href="/apartamenty"><a>Apartamenty</a></Link></li>
                                     <li><a className="link-gallery" href="#">Galeria</a></li>
                                     <li><a className="link-map" href="#">Lokalizacja</a></li>
                                     <li><a className="link-contact" href="#">Kontakt</a></li>
