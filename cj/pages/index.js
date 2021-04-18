@@ -1,18 +1,18 @@
-import { cmsBaseUrl } from '../config';
+import { localizationById } from '../api/localizations';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import AdditionalInfo from '../components/AdditionalInfo';
 import Descriptions from '../components/Descriptions';
 
-const Home = ({ content, error }) => {
-    const localisationDescriptions = content.descriptions;
-    const galleryStartImageNo = localisationDescriptions.length;
-
+const Home = ({ localisation, error }) => {
     if (error) {
-        return <div>An error occurred: {error.message}</div>;
+        return <div>An error occurred: {error}</div>;
     }
 
-    const indexedImages = content.images.map((img, index) => ({ index, img }));
+    const localisationDescriptions = localisation.descriptions;
+    const galleryStartImageNo = localisationDescriptions.length;
+
+    const indexedImages = localisation.images.map((img, index) => ({ index, img }));
     const galleryImages = () => {
         return indexedImages.slice(galleryStartImageNo, indexedImages.length);
     };
@@ -37,41 +37,27 @@ const Home = ({ content, error }) => {
                 </div>
 
                 <Contact/>
-                <AdditionalInfo additionalInfo={content.additionalInfo}/>
+                <AdditionalInfo additionalInfo={localisation.additionalInfo}/>
             </main>
         </div>
     )
 };
 
-Home.getInitialProps = async ctx => {
-    try {
-        // Parses the JSON returned by a network request
-        const parseJSON = resp => (resp.json ? resp.json() : resp);
-        // Checks if a network request came back fine, and throws an error if not
-        const checkStatus = resp => {
-            if (resp.status >= 200 && resp.status < 300) {
-                return resp;
+export const getStaticProps = async () => {
+    let { localisation, error } = await localizationById(1);
+
+    if (localisation) {
+        return {
+            props: {
+                localisation
             }
-
-            return parseJSON(resp).then(resp => {
-                throw resp;
-            });
         };
-
-        const headers = {
-            'Content-Type': 'application/json',
+    } else {
+        return {
+            props: {
+                error
+            }
         };
-
-        const content = await fetch(`${cmsBaseUrl}/localizations/1`, {
-            method: 'GET',
-            headers,
-        })
-            .then(checkStatus)
-            .then(parseJSON);
-
-        return { content };
-    } catch (error) {
-        return { error };
     }
 };
 
