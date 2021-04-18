@@ -6,7 +6,7 @@ const Navigation = () => {
             <nav className="navbar navbar-default navbar-fixed-top">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a id="link-top" className="navbar-brand" href="#">Chata Jana</a>
+                        <Link href="/"><a id="link-top" className="navbar-brand">Chata Jana</a></Link>
                     </div>
                     <div>
                         <ul className="nav navbar-nav navbar-right over-768">
