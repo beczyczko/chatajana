@@ -23,7 +23,6 @@ const Apartamenty = ({ localisation, error }) => {
                 <Descriptions descriptions={localisationDescriptions} indexedImages={indexedImages}/>
                 <Gallery galleryImages={galleryImages()}/>
 
-                {/*todo db mapa*/}
                 <div id="map-section" className="container-fluid content">
                     <div className="container">
                         <h1>Lokalizacja</h1>

@@ -17,7 +17,6 @@ const Home = ({ localisation, error }) => {
         return indexedImages.slice(galleryStartImageNo, indexedImages.length);
     };
 
-    //todo db apartamenty page
     //todo db favicon
     //todo db google analytics
     return (
