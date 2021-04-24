@@ -9,7 +9,7 @@ trigger:
       - master
 
 variables:
-  tag: '$(Build.SourceBranch)'
+  tag: '$(Build.SourceBranchName)'
 
 stages:
 - stage: Build
