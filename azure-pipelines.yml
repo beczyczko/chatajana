@@ -26,9 +26,9 @@ stages:
         containerRegistry: 'Nazwa.pl docker registry-ChataJana'
         command: 'login'
     - task: Docker@2
-      displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/cj/Dockerfile'
-        tags: |
-          $(tag)
+        containerRegistry: 'Nazwa.pl docker registry-ChataJana'
+        repository: 'sb.api'
+        command: 'buildAndPush'
+        Dockerfile: '$(Build.SourcesDirectory)/cj/Dockerfile'
+        tags: '$(tag)'
