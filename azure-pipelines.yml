@@ -33,4 +33,4 @@ stages:
         Dockerfile: '$(Build.SourcesDirectory)/cj/Dockerfile'
         tags: |
           $(tag)
-          'latest'
+          latest
