@@ -31,4 +31,6 @@ stages:
         repository: 'cj'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/cj/Dockerfile'
-        tags: '$(tag)'
+        tags: |
+          '$(tag)'
+          'latest'
