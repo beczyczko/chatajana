@@ -40,7 +40,7 @@ const Apartamenty = ({ localisation, error }) => {
     )
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     let { localisation, error } = await localizationById(2);
 
     if (localisation) {
