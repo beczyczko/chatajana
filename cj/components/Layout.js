@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import CjFooter from './CjFooter';
 import Bon from './Bon';
 import Partners from './Partners';
+import { GA_TRACKING_ID } from '../config';
 
 const Layout = ({ children }) => {
     return (
@@ -15,6 +16,22 @@ const Layout = ({ children }) => {
                 <link href='https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext'
                       rel='stylesheet' type='text/css'/>
 
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${GA_TRACKING_ID}', {
+                          page_path: window.location.pathname,
+                        });
+                      `,
+                    }}
+                />
                 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
                 <link href="lightbox/dist/css/lightbox.css" rel="stylesheet"/>
                 <link href="fontello/css/fontello.css" rel="stylesheet"/>
