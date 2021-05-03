@@ -1,12 +1,9 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+pr: none
 
 trigger:
   branches:
     include:
-      - use-cms-to-manage-content
-      - master
+      - '*'
 
 variables:
   tag: '$(Build.SourceBranchName)'
