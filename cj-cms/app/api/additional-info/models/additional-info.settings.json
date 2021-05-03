@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "additional-info",
+  "info": {
+    "name": "Additional Info"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

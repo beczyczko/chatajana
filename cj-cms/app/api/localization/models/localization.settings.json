@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localization",
+  "info": {
+    "name": "localization",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "additionalInfo": {
+      "model": "additional-info"
+    },
+    "descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text.description",
+      "required": false
+    }
+  }
+}

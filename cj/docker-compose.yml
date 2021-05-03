@@ -1,0 +1,12 @@
+version: '3.4'
+
+networks:
+  default:
+    external:
+      name: docker-shared-network
+
+services:
+  cj:
+    image: registry.mbtl.life/cj
+    container_name: cj
+    restart: unless-stopped
