@@ -7,6 +7,6 @@ networks:
 
 services:
   cj:
-    image: registry.mbtl.life/cj
+    image: registry.dobe.cc/cj
     container_name: cj
     restart: unless-stopped

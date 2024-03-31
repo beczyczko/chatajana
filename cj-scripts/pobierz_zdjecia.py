@@ -1,4 +1,4 @@
-cmsBaseUrl = 'https://cjcms.mbtl.life'
+cmsBaseUrl = 'https://cjcms.dobe.cc'
 
 def imageSource(image, format):
     imageFormats = image['formats']
